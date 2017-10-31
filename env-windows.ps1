@@ -138,6 +138,9 @@ npm install -g react-native-cli
 # Docker support
 code --install-extension PeterJausovec.vscode-docker
 
+# PlantUML support
+code --install-extension jebbs.plantuml
+
 #
 # MySQL
 #
