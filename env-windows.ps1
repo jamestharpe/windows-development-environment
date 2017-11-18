@@ -35,6 +35,12 @@ choco install tortoisegit --yes
 RefreshEnvPath
 
 #
+# AWS awscli
+#
+choco install awscli --yes
+RefreshEnvPath
+
+#
 # MinGW
 # 
 
@@ -71,6 +77,9 @@ npm-windows-upgrade --npm-version latest
 npm install -g gulp-cli 
 npm install -g yo
 npm install -g generator-docker
+npm install -g mocha
+npm install -g install-peerdeps
+npm install prettier-eslint --save-dev
 
 #
 # Docker
@@ -129,6 +138,15 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension RobinMalfait.prettier-eslint-vscode
 code --install-extension flowtype.flow-for-vscode
 code --install-extension dzannotti.vscode-babel-coloring
+code --install-extension esbenp.prettier-vscode
+
+# NPM support
+code --install-extension eg2.vscode-npm-script
+code --install-extension christian-kohler.npm-intellisense
+
+# Mocha support
+code --install-extension spoonscen.es6-mocha-snippets
+code --install-extension maty.vscode-mocha-sidebar
 
 # React Native support
 code --install-extension vsmobile.vscode-react-native
