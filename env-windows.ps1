@@ -76,10 +76,10 @@ npm install --global --production npm-windows-upgrade
 npm-windows-upgrade --npm-version latest
 npm install -g gulp-cli 
 npm install -g yo
-npm install -g generator-docker
 npm install -g mocha
 npm install -g install-peerdeps
-npm install prettier-eslint --save-dev
+npm install -g typescript
+# npm install prettier-eslint --save-dev
 
 #
 # Docker
@@ -139,6 +139,7 @@ code --install-extension RobinMalfait.prettier-eslint-vscode
 code --install-extension flowtype.flow-for-vscode
 code --install-extension dzannotti.vscode-babel-coloring
 code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-rename-tag
 
 # NPM support
 code --install-extension eg2.vscode-npm-script
