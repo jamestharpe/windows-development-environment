@@ -11,7 +11,7 @@
 # Functions
 #
 
-function RefreshEnvPath
+function Update-Environment-Path
 {
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") `
         + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
@@ -24,7 +24,7 @@ function RefreshEnvPath
 # Choco
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-RefreshEnvPath
+Update-Environment-Path
 
 #
 # Git
@@ -32,20 +32,20 @@ RefreshEnvPath
 
 choco install git --yes
 choco install tortoisegit --yes
-RefreshEnvPath
+Update-Environment-Path
 
 #
 # AWS awscli
 #
 choco install awscli --yes
-RefreshEnvPath
+Update-Environment-Path
 
 #
 # MinGW
 # 
 
 choco install mingw --yes
-RefreshEnvPath
+Update-Environment-Path
 
 # Get-Command mingw32-make
 
@@ -57,7 +57,7 @@ RefreshEnvPath
 #
 
 choco install caddy --yes
-RefreshEnvPath
+Update-Environment-Path
 
 #
 # Languages
@@ -67,11 +67,11 @@ choco install ruby --yes
 choco install ruby2.devkit --yes
 choco install python2 --yes
 choco install jdk8 --yes
-RefreshEnvPath
+Update-Environment-Path
 
 # Node
 choco install nodejs.install --yes
-RefreshEnvPath
+Update-Environment-Path
 npm install --global --production npm-windows-upgrade
 npm-windows-upgrade --npm-version latest
 npm install -g gulp-cli 
@@ -87,7 +87,7 @@ npm install -g typescript
 choco install docker --yes
 choco install docker-machine --yes
 choco install docker-compose --yes
-RefreshEnvPath
+Update-Environment-Path
 docker pull worpress
 docker pull mysql
 docker pull phpmyadmin
@@ -114,7 +114,7 @@ install-peerdeps --dev eslint-config-airbnb
 #
 
 choco install visualstudiocode --yes # includes dotnet
-RefreshEnvPath
+Update-Environment-Path
 code --install-extension robertohuertasm.vscode-icons
 
 # PowerShell support
@@ -207,6 +207,6 @@ choco install sysinternals --yes
 choco install procexp --yes
 choco install awscli --yes
 
-RefreshEnvPath
+Update-Environment-Path
 
 Write-Output "Finished! Run `choco upgrade all` to get the latest software"
