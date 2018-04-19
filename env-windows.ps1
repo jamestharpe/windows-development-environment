@@ -212,6 +212,7 @@ choco install firefox --yes
 choco install sysinternals --yes
 choco install procexp --yes
 choco install awscli --yes
+choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
 
 Update-Environment-Path
 
