@@ -33,6 +33,13 @@ Update-Environment-Path
 choco install git --yes
 choco install tortoisegit --yes
 Update-Environment-Path
+git config --global alias.pom 'pull origin master'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.ls "log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
+git config --global alias.ammend "commit -a --amend"
+git config --global alias.standup "log --since yesterday --author $(git config user.email) --pretty=short"
+git config --global alias.everything "! git pull && git submodule update --init --recursive"
+git config --global alias.aliases "config --get-regexp alias"
 
 #
 # AWS awscli
@@ -84,10 +91,17 @@ npm install -g typescript
 #
 # Docker
 # 
+
+# Hyper-V required for docker and other things
+Enable-WindowsOptionalFeature -Online -FeatureName:Microsoft-Hyper-V -All -NoRestart
+
 choco install docker --yes
 choco install docker-machine --yes
 choco install docker-compose --yes
+choco install docker-for-windows --yes
+
 Update-Environment-Path
+
 docker pull worpress
 docker pull mysql
 docker pull phpmyadmin
@@ -116,6 +130,7 @@ install-peerdeps --dev eslint-config-airbnb
 choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
 code --install-extension robertohuertasm.vscode-icons
+code --install-extension CoenraadS.bracket-pair-colorizer
 
 # PowerShell support
 code --install-extension ms-vscode.PowerShell
@@ -206,6 +221,7 @@ choco install firefox --yes
 choco install sysinternals --yes
 choco install procexp --yes
 choco install awscli --yes
+choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
 
 Update-Environment-Path
 
