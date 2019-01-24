@@ -30,7 +30,7 @@ Update-Environment-Path
 # Git
 #
 
-choco install git --yes
+choco install git --yes --params '/GitAndUnixToolsOnPath'
 choco install tortoisegit --yes
 Update-Environment-Path
 git config --global alias.pom 'pull origin master'
