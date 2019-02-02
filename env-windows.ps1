@@ -177,6 +177,7 @@ code --install-extension jebbs.plantuml
 
 # Markdown Support 
 code --install-extension yzhang.markdown-all-in-one
+code --install-extension mdickin.markdown-shortcuts
 
 #
 # MySQL
