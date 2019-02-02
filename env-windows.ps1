@@ -175,6 +175,9 @@ code --install-extension PeterJausovec.vscode-docker
 # PlantUML support
 code --install-extension jebbs.plantuml
 
+# Markdown Support 
+code --install-extension yzhang.markdown-all-in-one
+
 #
 # MySQL
 #
