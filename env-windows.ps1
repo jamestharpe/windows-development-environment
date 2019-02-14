@@ -131,6 +131,7 @@ choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension eamodio.gitlens
 
 # PowerShell support
 code --install-extension ms-vscode.PowerShell
