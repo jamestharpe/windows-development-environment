@@ -165,6 +165,9 @@ code --install-extension christian-kohler.npm-intellisense
 code --install-extension spoonscen.es6-mocha-snippets
 code --install-extension maty.vscode-mocha-sidebar
 
+# Jasmin Support
+code --install-extension hbenl.vscode-jasmine-test-adapter
+
 # React Native support
 code --install-extension vsmobile.vscode-react-native
 npm install -g create-react-native-app
