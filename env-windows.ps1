@@ -168,6 +168,9 @@ code --install-extension maty.vscode-mocha-sidebar
 # Jasmin Support
 code --install-extension hbenl.vscode-jasmine-test-adapter
 
+# Jest support
+code --install-extension Orta.vscode-jest
+
 # React Native support
 code --install-extension vsmobile.vscode-react-native
 npm install -g create-react-native-app
