@@ -11,10 +11,16 @@
 # Functions
 #
 
-function Update-Environment-Path
-{
-    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") `
-        + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+function Update-Environment-Path {
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") `
+        + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
+}
+
+function Push-User-Path($userPath) {
+    $path = [Environment]::GetEnvironmentVariable('Path', 'User')
+    $newpath = "$userPath;$path"
+    [Environment]::SetEnvironmentVariable("Path", $newpath, 'User')
+    Update-Environment-Path
 }
 
 #
@@ -23,7 +29,7 @@ function Update-Environment-Path
 
 # Choco
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
-Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-Expression
 Update-Environment-Path
 
 #
@@ -72,9 +78,23 @@ Update-Environment-Path
 choco install php --yes
 choco install ruby --yes
 choco install ruby2.devkit --yes
-choco install python2 --yes
 choco install jdk8 --yes
 Update-Environment-Path
+
+
+git clone https://github.com/pyenv-win/pyenv-win.git $env:USERPROFILE\.pyenv
+[Environment]::SetEnvironmentVariable("PYENV", "$env:USERPROFILE\.pyenv\pyenv-win", 'User')
+Push-User-Path "%PYENV%\bin"
+Push-User-Path "%PYENV%\shims"
+pyenv rehash
+pyenv install 2.7.9
+pyenv install 3.8.3
+pyenv global 3.8.3 # default to latest
+pyenv rehash
+python -m pip install -U pip
+pip install virtualenv
+Update-Environment-Path
+Write-Output "Python, Pyenv, and virtualenv installed! Use 'python3 -m venv <dir>' to create an environment"
 
 # Node
 choco install nodejs.install --yes
@@ -105,6 +125,18 @@ Update-Environment-Path
 docker pull worpress
 docker pull mysql
 docker pull phpmyadmin
+
+Update-Environment-Path
+
+#
+# Kubernetes
+#
+
+choco install minikube --yes
+choco install kubernetes-cli --yes
+
+# Note: VirtualBox sucks, see instructions here to run minikube: https://medium.com/@JockDaRock/minikube-on-windows-10-with-hyper-v-6ef0f4dc158c
+# TLDR: run with `minikube start --vm-driver hyperv --hyperv-virtual-switch "Primary Virtual Switch"`
 
 
 # Yarn
@@ -163,6 +195,9 @@ code --install-extension christian-kohler.npm-intellisense
 # Mocha support
 code --install-extension spoonscen.es6-mocha-snippets
 code --install-extension maty.vscode-mocha-sidebar
+
+# React Support
+code --install-extension msjsdiag.debugger-for-chrome
 
 # React Native support
 code --install-extension vsmobile.vscode-react-native
