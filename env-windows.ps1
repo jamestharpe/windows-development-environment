@@ -36,7 +36,7 @@ Update-Environment-Path
 # Git
 #
 
-choco install git --yes
+choco install git --yes --params '/GitAndUnixToolsOnPath'
 choco install tortoisegit --yes
 Update-Environment-Path
 git config --global alias.pom 'pull origin master'
@@ -163,6 +163,7 @@ choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension eamodio.gitlens
 
 # PowerShell support
 code --install-extension ms-vscode.PowerShell
@@ -196,8 +197,11 @@ code --install-extension christian-kohler.npm-intellisense
 code --install-extension spoonscen.es6-mocha-snippets
 code --install-extension maty.vscode-mocha-sidebar
 
-# React Support
-code --install-extension msjsdiag.debugger-for-chrome
+# Jasmin Support
+code --install-extension hbenl.vscode-jasmine-test-adapter
+
+# Jest support
+code --install-extension Orta.vscode-jest
 
 # React Native support
 code --install-extension vsmobile.vscode-react-native
@@ -209,6 +213,10 @@ code --install-extension PeterJausovec.vscode-docker
 
 # PlantUML support
 code --install-extension jebbs.plantuml
+
+# Markdown Support 
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension mdickin.markdown-shortcuts
 
 #
 # MySQL
@@ -257,6 +265,7 @@ choco install sysinternals --yes
 choco install procexp --yes
 choco install awscli --yes
 choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
+choco install everything --yes
 
 Update-Environment-Path
 
