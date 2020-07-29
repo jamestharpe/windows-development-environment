@@ -16,7 +16,7 @@ sudo add-apt-repository restricted
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # Install dev tools
-sudo apt install -y software-properties-common nodejs gcc g++ make python3-venv python-pip python3-pip 
+sudo apt install -y software-properties-common build-essential nodejs gcc g++ make python3-venv python-pip python3-pip 
 
 # Fixup Pip, which is a bit touchy
 curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
@@ -28,6 +28,9 @@ echo 'export export LC_CTYPE="en_US.UTF-8"' >> ~/.bashrc
 source ~/.bashrc
 
 sudo dpkg-reconfigure locales # See https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-locale-setting
+
+# Python libs
+pip install cython
 
 # Clean up junk
 sudo apt autoremove -y
