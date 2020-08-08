@@ -32,6 +32,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-Expression
 Update-Environment-Path
 
+# Utils
+Get-Command -Module Microsoft.PowerShell.Archive
+
 #
 # Git
 #
@@ -46,6 +49,22 @@ git config --global alias.ammend "commit -a --amend"
 git config --global alias.standup "log --since yesterday --author $(git config user.email) --pretty=short"
 git config --global alias.everything "! git pull && git submodule update --init --recursive"
 git config --global alias.aliases "config --get-regexp alias"
+
+# PowerShell Tooling for Git
+Install-Module posh-git -Force -Scope CurrentUser
+Install-Module oh-my-posh -Force -Scope CurrentUser
+Set-Prompt
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+Add-Content $PROFILE "`nImport-Module posh-git`nImport-Module oh-my-posh`nSet-Theme Paradox"
+
+
+# Font to support PowerShell Tooling:
+choco install cascadiacode --yes
+choco install cascadiamono --yes
+choco install cascadiacodepl --yes
+choco install cascadiamonopl --yes
+
+Write-Output 'Be sure to configure Windows Terminal fonts! Suggest using "fontFace": "Cascadia Code PL"'
 
 #
 # AWS awscli
@@ -218,6 +237,9 @@ code --install-extension jebbs.plantuml
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension mdickin.markdown-shortcuts
 
+# WSL Support
+code --install-extension ms-vscode-remote.remote-wsl
+
 #
 # MySQL
 #
@@ -246,6 +268,9 @@ choco install hugo --yes
 # choco install slack --yes
 # choco install xenulinksleuth --yes
 
+# Windows Terminal
+choco install microsoft-windows-terminal --yes
+
 # File Management
 choco install beyondcompare --yes
 choco install 7zip --yes
@@ -268,5 +293,12 @@ choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
 choco install everything --yes
 
 Update-Environment-Path
+
+# Windows Subsystem for Linux
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+Enable-WindowsOptionalFeature -Online -FeatureName $("VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux")
+Update-Environment-Path
+wsl --set-default-version 2
+Start-Process https://aka.ms/wslstore
 
 Write-Output "Finished! Run `choco upgrade all` to get the latest software"
