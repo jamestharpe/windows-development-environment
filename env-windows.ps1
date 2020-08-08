@@ -183,6 +183,7 @@ Update-Environment-Path
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension eamodio.gitlens
+code --install-extension oderwat.indent-rainbow
 
 # PowerShell support
 code --install-extension ms-vscode.PowerShell
