@@ -180,10 +180,13 @@ install-peerdeps --dev eslint-config-airbnb
 
 choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
+
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension eamodio.gitlens
 code --install-extension oderwat.indent-rainbow
+code --install-extension sdras.night-owl
+Start-Process https://github.com/sdras/night-owl-vscode-theme
 
 # PowerShell support
 code --install-extension ms-vscode.PowerShell
