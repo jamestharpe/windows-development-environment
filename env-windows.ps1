@@ -125,7 +125,6 @@ npm install -g yo
 npm install -g mocha
 npm install -g install-peerdeps
 npm install -g typescript
-# npm install prettier-eslint --save-dev
 
 #
 # Docker
@@ -167,13 +166,6 @@ npm install -g bower
 # Grunt
 npm install -g grunt-cli
 
-# ESLint
-npm install -g eslint
-npm install -g babel-eslint
-npm install -g eslint-plugin-react
-npm install -g install-peerdeps
-install-peerdeps --dev eslint-config-airbnb
-
 #
 # VS Code
 #
@@ -203,10 +195,8 @@ code --install-extension rebornix.Ruby
 
 # HTML, CSS, JavaScript support
 code --install-extension Zignd.html-css-class-completion
-code --install-extension lonefy.vscode-JS-CSS-HTML-formatter
 code --install-extension robinbentley.sass-indented
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension RobinMalfait.prettier-eslint-vscode
 code --install-extension flowtype.flow-for-vscode
 code --install-extension dzannotti.vscode-babel-coloring
 code --install-extension esbenp.prettier-vscode
