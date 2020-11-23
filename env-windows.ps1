@@ -187,7 +187,6 @@ code --install-extension ms-vscode.PowerShell
 code --install-extension ms-vscode.csharp
 
 # PHP support
-code --install-extension felixfbecker.php-debug
 code --install-extension HvyIndustries.crane
 
 # Ruby support
@@ -197,7 +196,6 @@ code --install-extension rebornix.Ruby
 code --install-extension Zignd.html-css-class-completion
 code --install-extension robinbentley.sass-indented
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension flowtype.flow-for-vscode
 code --install-extension dzannotti.vscode-babel-coloring
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
@@ -205,10 +203,6 @@ code --install-extension formulahendry.auto-rename-tag
 # NPM support
 code --install-extension eg2.vscode-npm-script
 code --install-extension christian-kohler.npm-intellisense
-
-# Mocha support
-code --install-extension spoonscen.es6-mocha-snippets
-code --install-extension maty.vscode-mocha-sidebar
 
 # Jasmin Support
 code --install-extension hbenl.vscode-jasmine-test-adapter
