@@ -192,6 +192,9 @@ code --install-extension HvyIndustries.crane
 # Ruby support
 code --install-extension rebornix.Ruby
 
+# C++ support
+code --install-extension ms-vscode.cpptools
+
 # HTML, CSS, JavaScript support
 code --install-extension Zignd.html-css-class-completion
 code --install-extension robinbentley.sass-indented
