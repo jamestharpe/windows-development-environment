@@ -259,6 +259,9 @@ choco install hugo --yes
 # choco install slack --yes
 # choco install xenulinksleuth --yes
 
+# InkScape
+choco install inkscape --yes
+
 # Windows Terminal
 choco install microsoft-windows-terminal --yes
 
