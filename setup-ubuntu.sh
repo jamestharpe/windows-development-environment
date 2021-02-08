@@ -19,6 +19,13 @@ sudo apt-get install -y nodejs
 # Install dev tools
 sudo apt install -y software-properties-common build-essential nodejs gcc g++ make python3-venv python3-pip 
 
+# Install Chrome (for headless debug)
+sudo apt-get install -yqq daemonize dbus-user-session fontconfig chromium-browser
+sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+sudo systemctl unmask snapd.service
+systemctl enable snapd.service
+sudo snap install chromium
+
 # Fixup Pip, which is a bit touchy
 curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
 sudo python3 get-pip.py
