@@ -12,8 +12,9 @@ sudo apt-add-repository universe
 sudo add-apt-repository multiverse
 sudo add-apt-repository restricted
 
-# Prep NodeJS install
+# Install NodeJS
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Install dev tools
 sudo apt install -y software-properties-common build-essential nodejs gcc g++ make python3-venv python-pip python3-pip 
