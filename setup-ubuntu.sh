@@ -13,7 +13,7 @@ sudo add-apt-repository multiverse
 sudo add-apt-repository restricted
 
 # Install general utilities and dependencies
-sudo apt install -y unzip libasound2 libnspr4 libnss3 libxss1 xdg-utils unzip libappindicator1 fonts-liberation net-tools
+sudo apt install -y unzip libasound2 libnspr4 libnss3 libxss1 xdg-utils libappindicator1 fonts-liberation net-tools
 
 # Install general dev tools
 sudo apt install -y software-properties-common build-essential nodejs gcc g++ make python3-venv python3-pip 
