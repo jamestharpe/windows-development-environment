@@ -224,6 +224,7 @@ npm install -g react-native-cli
 
 # Docker support
 code --install-extension PeterJausovec.vscode-docker
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 
 # PlantUML support
 code --install-extension jebbs.plantuml
