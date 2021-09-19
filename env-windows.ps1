@@ -178,7 +178,6 @@ choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
 
 code --install-extension robertohuertasm.vscode-icons
-code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension eamodio.gitlens
 code --install-extension oderwat.indent-rainbow
 code --install-extension sdras.night-owl
@@ -203,7 +202,6 @@ code --install-extension ms-vscode.cpptools
 code --install-extension Zignd.html-css-class-completion
 code --install-extension robinbentley.sass-indented
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension dzannotti.vscode-babel-coloring
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
 
