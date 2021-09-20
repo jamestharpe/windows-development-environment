@@ -21,6 +21,9 @@ sudo apt install -y software-properties-common build-essential nodejs gcc g++ ma
 # Install NodeJS
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt-get install -y nodejs
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
 
 # Install Chrome (for headless debug) - hat tip: https://gist.github.com/LoganGray/8aa2de1a079222d9e2ba39ecd207684e
 wget http://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -54,6 +57,3 @@ cd temp-empty-dir
 code .
 cd ../
 rm -rf temp-empty-dir
-
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
