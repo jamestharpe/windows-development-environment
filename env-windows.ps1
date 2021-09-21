@@ -63,12 +63,11 @@ Add-Content $PROFILE "`nImport-Module posh-git`nImport-Module oh-my-posh`nSet-Th
 
 
 # Font to support PowerShell Tooling:
-choco install cascadiacode --yes
-choco install cascadiamono --yes
-choco install cascadiacodepl --yes
-choco install cascadiamonopl --yes
-
-Write-Output 'Be sure to configure Windows Terminal fonts! Suggest using "fontFace": "Cascadia Code PL"'
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+.\install.ps1
+cd ..\
+Write-Output 'Be sure to configure Windows Terminal fonts! Suggest using "fontFace": "MesloLGM NF"'
 
 #
 # AWS awscli
