@@ -176,63 +176,7 @@ npm install -g grunt-cli
 choco install visualstudiocode --yes # includes dotnet
 Update-Environment-Path
 
-code --install-extension robertohuertasm.vscode-icons
-code --install-extension eamodio.gitlens
-code --install-extension oderwat.indent-rainbow
-code --install-extension sdras.night-owl
-Start-Process https://github.com/sdras/night-owl-vscode-theme
-
-# PowerShell support
-code --install-extension ms-vscode.PowerShell
-
-# CSharp support
-code --install-extension ms-vscode.csharp
-
-# PHP support
-code --install-extension HvyIndustries.crane
-
-# Ruby support
-code --install-extension rebornix.Ruby
-
-# C++ support
-code --install-extension ms-vscode.cpptools
-
-# HTML, CSS, JavaScript, SVG support
-code --install-extension Zignd.html-css-class-completion
-code --install-extension robinbentley.sass-indented
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension esbenp.prettier-vscode
-code --install-extension formulahendry.auto-rename-tag
-code --install-extension tldraw-org.tldraw-vscode
-
-# NPM support
-code --install-extension eg2.vscode-npm-script
-code --install-extension christian-kohler.npm-intellisense
-
-# Jasmin Support
-code --install-extension hbenl.vscode-jasmine-test-adapter
-
-# Jest support
-code --install-extension Orta.vscode-jest
-
-# React Native support
-code --install-extension vsmobile.vscode-react-native
-npm install -g create-react-native-app
-npm install -g react-native-cli
-
-# Docker support
-code --install-extension PeterJausovec.vscode-docker
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-
-# PlantUML support
-code --install-extension jebbs.plantuml
-
-# Markdown Support 
-code --install-extension yzhang.markdown-all-in-one
-code --install-extension mdickin.markdown-shortcuts
-
-# WSL Support
-code --install-extension ms-vscode-remote.remote-wsl
+bash.exe vscode-extensions.sh
 
 #
 # MySQL
@@ -247,13 +191,6 @@ choco install mysql.workbench --yes
 # 
 
 choco install androidstudio --yes
-
-#
-# Static Site Generators
-#
-
-# Hugo
-choco install hugo --yes
 
 #
 # Basic Utilities
