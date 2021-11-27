@@ -197,12 +197,13 @@ code --install-extension rebornix.Ruby
 # C++ support
 code --install-extension ms-vscode.cpptools
 
-# HTML, CSS, JavaScript support
+# HTML, CSS, JavaScript, SVG support
 code --install-extension Zignd.html-css-class-completion
 code --install-extension robinbentley.sass-indented
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-rename-tag
+code --install-extension tldraw-org.tldraw-vscode
 
 # NPM support
 code --install-extension eg2.vscode-npm-script
