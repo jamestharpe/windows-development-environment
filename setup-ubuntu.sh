@@ -1,3 +1,5 @@
+set -e
+
 #
 # Tested on WSL 2 with Ubuntu
 # Run this in an Ubuntu terminal to install dev tools
