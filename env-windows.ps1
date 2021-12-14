@@ -86,10 +86,7 @@ npm-windows-upgrade --npm-version latest
 # Hyper-V required for docker and other things
 Enable-WindowsOptionalFeature -Online -FeatureName:Microsoft-Hyper-V -All -NoRestart
 
-choco install docker-cli --yes
-choco install docker-machine --yes
-choco install docker-compose --yes
-choco install docker-for-windows --yes
+choco install docker-desktop --yes
 
 Update-Environment-Path
 
