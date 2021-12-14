@@ -67,3 +67,6 @@ cd ../
 rm -rf temp-empty-dir
 
 ./vscode-extensions.sh
+
+# NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
