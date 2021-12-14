@@ -62,7 +62,7 @@ Add-Content $PROFILE "`nImport-Module posh-git`nImport-Module oh-my-posh`nSet-Th
 
 
 # Font to support PowerShell Tooling:
-git clone https://github.com/ryanoasis/nerd-fonts.git
+git clone https://github.com/ryanoasis/nerd-fonts.git  --depth 1
 cd nerd-fonts
 .\install.ps1
 cd ..\
