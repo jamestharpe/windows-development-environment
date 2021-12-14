@@ -25,7 +25,7 @@ code --install-extension ms-vscode-remote.remote-wsl
 # Docker support
 #
 
-code --install-extension PeterJausovec.vscode-docker
+code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 
 #
