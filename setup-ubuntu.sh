@@ -10,12 +10,13 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # Add all the apt repositories
-sudo apt-add-repository universe
+sudo add-apt-repository universe
 sudo add-apt-repository multiverse
 sudo add-apt-repository restricted
+sudo add-apt-repository ppa:git-core/ppa
 
 # Install general utilities and dependencies
-sudo apt install -y unzip libasound2 libnspr4 libnss3 libxss1 xdg-utils libappindicator1 fonts-liberation net-tools apt-transport-https
+sudo apt install -y software-properties-common git unzip libasound2 libnspr4 libnss3 libxss1 xdg-utils libappindicator1 fonts-liberation net-tools apt-transport-https
 
 # Install general dev tools
 sudo apt install -y software-properties-common build-essential nodejs gcc g++ make python3-venv python3-pip 
