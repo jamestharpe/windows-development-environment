@@ -42,6 +42,7 @@ choco install tortoisegit --yes
 Update-Environment-Path
 
 git config --global core.editor "code --wait"
+git config --global init.defaultBranch main
 
 # Aliases
 git config --global alias.pom 'pull origin main'
