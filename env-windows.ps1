@@ -114,6 +114,7 @@ bash.exe vscode-extensions.sh
 # Visual Studio 2022
 #
 
+
 choco install visualstudio2022community
 Update-Environment-Path
 
