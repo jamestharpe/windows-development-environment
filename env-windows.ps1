@@ -151,7 +151,7 @@ choco install 7zip --yes
 choco install notepadplusplus --yes
 choco install filezilla --yes
 choco install winscp --yes
-choco install kdiff3 --yes
+#choco install kdiff3 --yes
 choco install s3browser --yes
 choco install grepwin --yes
 
