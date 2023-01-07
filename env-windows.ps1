@@ -113,8 +113,24 @@ bash.exe vscode-extensions.sh
 #
 # Visual Studio 2022
 #
+$Components = @(
+"Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools",
+"Microsoft.VisualStudio.Workload.MSBuildTools",
+"Microsoft.VisualStudio.Workload.NodeBuildTools;includeOptional",
+"Microsoft.VisualStudio.Workload.WebBuildTools",
+"Microsoft.VisualStudio.Workload.Azure",
+"Microsoft.VisualStudio.Workload.ManagedDesktop",
+"Microsoft.VisualStudio.Workload.NativeDesktop",
+"Microsoft.VisualStudio.Workload.NetCrossPlat",
+"Microsoft.VisualStudio.Workload.NetWeb",
+"Microsoft.VisualStudio.Workload.Node",
+"Microsoft.VisualStudio.Workload.Python",
+"Microsoft.VisualStudio.Workload.Universal"
+)
+$InstallerArgs = "--add " + ($Components -join " --add ")
 
 choco install visualstudio2022community --yes
+choco install visualstudio2022buildtools --yes --params $InstallerArgs
 Update-Environment-Path
 
 # Windows Terminal
