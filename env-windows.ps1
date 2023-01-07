@@ -110,6 +110,13 @@ Update-Environment-Path
 
 bash.exe vscode-extensions.sh
 
+#
+# Visual Studio 2022
+#
+
+choco install visualstudio2022community
+Update-Environment-Path
+
 # Windows Terminal
 choco install microsoft-windows-terminal --yes
 
