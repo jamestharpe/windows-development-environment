@@ -130,7 +130,16 @@ $Components = @(
 $InstallerArgs = "--add " + ($Components -join " --add ")
 
 choco install visualstudio2022community --yes
-choco install visualstudio2022buildtools --yes --params $InstallerArgs
+choco install visualstudio2022-workload-azure --yes
+choco install visualstudio2022-workload-manageddesktop --yes
+choco install visualstudio2022-workload-nativedesktop --yes
+choco install visualstudio2022-workload-netweb --yes
+choco install visualstudio2022-workload-node --includeOptional --yes
+choco install visualstudio2022-workload-python
+choco install visualstudio2022-workload-universal
+
+
+#choco install visualstudio2022buildtools --yes --params $InstallerArgs
 Update-Environment-Path
 
 # Windows Terminal
