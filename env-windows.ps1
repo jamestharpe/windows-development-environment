@@ -75,10 +75,10 @@ choco install awscli --yes
 Update-Environment-Path
 
 # Node
-choco install nodejs.install --yes
-Update-Environment-Path
-npm install --global --production npm-windows-upgrade
-npm-windows-upgrade --npm-version latest
+# choco install nodejs.install --yes
+# Update-Environment-Path
+# npm install --global --production npm-windows-upgrade
+# npm-windows-upgrade --npm-version latest
 
 #
 # Docker
@@ -114,8 +114,7 @@ bash.exe vscode-extensions.sh
 # Visual Studio 2022
 #
 
-
-choco install visualstudio2022community
+choco install visualstudio2022community --yes
 Update-Environment-Path
 
 # Windows Terminal
@@ -124,10 +123,17 @@ choco install microsoft-windows-terminal --yes
 # File Management
 choco install beyondcompare --yes
 choco install 7zip --yes
+choco install notepadplusplus --yes
+choco install filezilla --yes
+choco install winscp --yes
+choco install kdiff3 --yes
+choco install s3browser --yes
+choco install grepwin --yes
+
 
 # Media Viewers
-choco install irfanview --yes
-choco install vlc --yes
+#choco install irfanview --yes
+#choco install vlc --yes
 
 # Browsers
 choco install googlechrome --yes
@@ -136,12 +142,14 @@ choco install firefox --yes
 # Misc
 choco install sysinternals --yes
 choco install procexp --yes
-choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
+#choco install firacode --yes # See https://www.youtube.com/watch?v=KI6m_B1f8jc
 choco install everything --yes
+choco install putty --yes
+choco install wiztree --yes
 
 Update-Environment-Path
 
 # Windows Subsystem for Linux
-wsl --install
+# wsl --install
 
 Write-Output "Finished! Run `choco upgrade all` to get the latest software"
