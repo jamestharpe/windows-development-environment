@@ -110,38 +110,6 @@ Update-Environment-Path
 
 bash.exe vscode-extensions.sh
 
-#
-# Visual Studio 2022
-#
-$Components = @(
-"Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools",
-"Microsoft.VisualStudio.Workload.MSBuildTools",
-"Microsoft.VisualStudio.Workload.NodeBuildTools;includeOptional",
-"Microsoft.VisualStudio.Workload.WebBuildTools",
-"Microsoft.VisualStudio.Workload.Azure",
-"Microsoft.VisualStudio.Workload.ManagedDesktop",
-"Microsoft.VisualStudio.Workload.NativeDesktop",
-"Microsoft.VisualStudio.Workload.NetCrossPlat",
-"Microsoft.VisualStudio.Workload.NetWeb",
-"Microsoft.VisualStudio.Workload.Node",
-"Microsoft.VisualStudio.Workload.Python",
-"Microsoft.VisualStudio.Workload.Universal"
-)
-$InstallerArgs = "--add " + ($Components -join " --add ")
-
-choco install visualstudio2022community --yes
-choco install visualstudio2022-workload-azure --yes
-choco install visualstudio2022-workload-manageddesktop --yes
-choco install visualstudio2022-workload-nativedesktop --yes
-choco install visualstudio2022-workload-netweb --yes
-choco install visualstudio2022-workload-node --includeOptional --yes
-choco install visualstudio2022-workload-python
-choco install visualstudio2022-workload-universal
-
-
-#choco install visualstudio2022buildtools --yes --params $InstallerArgs
-Update-Environment-Path
-
 # Windows Terminal
 choco install microsoft-windows-terminal --yes
 
