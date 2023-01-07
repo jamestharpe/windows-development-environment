@@ -53,20 +53,20 @@ git config --global alias.ammend "commit -a --amend"
 git config --global alias.everything "! git pull && git submodule update --init --recursive"
 git config --global alias.aliases "config --get-regexp alias"
 
-# PowerShell Tooling for Git
-Install-Module posh-git -Force -Scope CurrentUser
-Install-Module oh-my-posh -Force -Scope CurrentUser
-Set-Prompt
-Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
-Add-Content $PROFILE "`nImport-Module posh-git`nImport-Module oh-my-posh`nSet-PoshPrompt Paradox"
+# # PowerShell Tooling for Git
+# Install-Module posh-git -Force -Scope CurrentUser
+# Install-Module oh-my-posh -Force -Scope CurrentUser
+# Set-Prompt
+# Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+# Add-Content $PROFILE "`nImport-Module posh-git`nImport-Module oh-my-posh`nSet-PoshPrompt Paradox"
 
 
-# Font to support PowerShell Tooling:
-git clone https://github.com/ryanoasis/nerd-fonts.git  --depth 1
-cd nerd-fonts
-.\install.ps1
-cd ..\
-Write-Output 'Be sure to configure Windows Terminal fonts! Suggest using "fontFace": "MesloLGM NF"'
+# # Font to support PowerShell Tooling:
+# git clone https://github.com/ryanoasis/nerd-fonts.git  --depth 1
+# cd nerd-fonts
+# .\install.ps1
+# cd ..\
+# Write-Output 'Be sure to configure Windows Terminal fonts! Suggest using "fontFace": "MesloLGM NF"'
 
 #
 # AWS awscli
