@@ -63,7 +63,6 @@ Update-Environment-Path
 choco install microsoft-windows-terminal --yes
 
 # File Management
-choco install beyondcompare --yes
 choco install s3browser --yes
 choco install grepwin --yes
 

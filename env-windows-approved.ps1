@@ -70,7 +70,7 @@ choco install 7zip --yes
 choco install notepadplusplus --yes
 choco install filezilla --yes
 choco install winscp --yes
-choco install kdiff3 --yes
+#choco install kdiff3 --yes
 
 # Browsers
 choco install googlechrome --yes
@@ -79,6 +79,8 @@ choco install firefox --yes
 # Misc
 choco install procexp --yes
 choco install putty --yes
+choco install openssh --yes
+choco install mremoteng --yes
 
 
 Update-Environment-Path
