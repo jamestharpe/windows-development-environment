@@ -81,6 +81,7 @@ choco install procexp --yes
 choco install putty --yes
 choco install openssh --yes
 choco install mremoteng --yes
+choco install gpg4win --yes
 
 
 Update-Environment-Path
